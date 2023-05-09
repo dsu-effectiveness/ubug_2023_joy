@@ -153,17 +153,18 @@ a, a > code {
   color: var(--title-slide-text-color);
 }
 .title-slide h1 {
-  color: #000000;
+  color: #DBDBDB;
   position: fixed;
-  bottom: 0px;
+  top: 30px;
   left: 30px;
-  font-family: 'Nunito Sans', sans-serif;;
+  font-family: 'Josefin Sans', sans-serif;;
 }
 .title-slide h2 {
   color: #333333;
   position: fixed;
   top: 90px;
   left: 150px;
+  padding-top: 10px;
   font-weight:200;
   font-size:36px;
   font-family: 'Josefin Sans', sans-serif;;
@@ -175,7 +176,7 @@ a, a > code {
   right: 30px;
   font-family: 'Nunito Sans', sans-serif;
 }
-#theo-roe-matt-nickodemus {
+#joy-lindsay {
   position: fixed;
   bottom: 40px;
   right:32px;

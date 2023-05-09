@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Your title</title>
+    <title>Compliance Reporting With R</title>
     <meta charset="utf-8" />
-    <script src="slides_files/header-attrs-2.21/header-attrs.js"></script>
+    <meta name="author" content="Joy Lindsay" />
+    <meta name="date" content="2023-05-11" />
+    <script src="slides_files/header-attrs-2.14/header-attrs.js"></script>
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Your title
+.title[
+# Compliance Reporting With R
+]
+.subtitle[
+## Yay! Edify!
+]
+.author[
+### Joy Lindsay
+]
+.date[
+### May 11, 2023
+]
 
 ---
 
@@ -24,45 +37,48 @@ class: opener
 
 ---
 class: inverse, left
-# Slide 1
+# Where We Are
 
-This is my first slide. Inverse make the background dark. Left aligns the text on the slide.
+Please be sure to look both ways before crossing!
+
+&lt;img style="margin-top:-5px", src="images/stoplight.jpeg" alt="" width="300"&gt;
 
 ---
-class: center
-# Slide 2
+class: left
+# Key Outcomes of Automation Using R
 
-This is my second slide. The background is white because there is not class opener or center. The slide is also center aligned because it has a class center. I am going to include a picture.
+AKA: "Everything is Awesome!"
 
-&lt;img style="margin-top:-5px", src="images/code_love.jpg" alt="" width="300"&gt;
+* Time: What previously could take up to 2 hours to run the SQL behind a report for IPEDS or USHE can now be run in minutes.
+
+* Collaboration: Using version control in GitHub, project management is easily reviewed and merged to incorporate all our individual work.
+
+* Successful Data Auditing: Through the use of daily automated data audit reports, data stewards at Utah Tech are receiving daily reports to address errors. This process has created a cleaner data set that we use to create our reporting submission files.
+
+* Error Resolution: Error or "Fix" files that come back to us after an initial report submission are jokingly referred to as "bleeding" with red/fatal errors. By writing simple mutate statements within the body of our file submission markdown file we can quickly resolve fatal errors and resubmit for additional review.
+
+---
+class: left
+# Error Resolution In Action
+
+Example of a Fatal Error in our Fall 22 3rd Week submission, round 1. Here we are looking at fixing element S17, which is a conflict between a previous and current registration status:
+
+&lt;img style="margin-top:-5px", src="images/fixme.png" alt="" width="500"&gt;
+
+Using this small chunk of code to write a mutate statement in our Markdown submission file, we can quickly resolve fatal errors that are impacting four id numbers using just a few lines of code:
+
+&lt;img style="margin-top:-5px", src="images/mutate.png" alt="" width="600"&gt;
+
+Outcome: Fall 2022 End of Term first submission, error resolution and final submission was done in less than 3 rounds of fixes, taking approximately 4 hours in one week to clear.
 
 
 ---
 class: left
-# Slide 3
+# Thank You &amp; Questions
 
-## R code
-
-```r
-table_df &lt;- input_df %&gt;% 
-  select(my, favorite, columns) %&gt;% 
-  filter(my == 'something') %&gt;% 
-  group_by(favorite, columns) %&gt;% 
-  something()
-```
+The creation, validation, and testing of this process occurred during the summer of 2022 and was fully live and in production for Fall 2022. We would like to extend our thanks to the USHE System Office, especially Chance Groskreutz and Matt Baxter for their willingness to assist us in the testing process last summer.
 
 ---
-class: left
-# Slide 4
-
-## SQL Code
-
-```sql
-SELECT *
-  FROM my_table
- WHERE validated = TRUE
-  AND  sloppy = FALSE
-```
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -110,6 +126,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
