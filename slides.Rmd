@@ -1,8 +1,9 @@
 ---
 title: "Compliance Reporting With R"
 subtitle: "Yay! Edify!"
-author: "Joy Lindsay"
-date: May 11, 2023
+author: "Joy Lindsay And Andrea Bringhurst"
+date: "May 11, 2023"
+
 output: 
   xaringan::moon_reader:
     includes:
